@@ -16,11 +16,39 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error #u
 
 
 
-#importing other sources
+#connecting to other sources
 
+#############################imports##################################################
+
+##SQL##
+#from sqlalchemy import create_engine
+#import pyodbc - Use if you want to use microsoft SQL server
+
+##Data Warehouse(Snowflake, Google, Amazon, etc)##
+
+#import snowflake.connector(Snowflake)
+#from google.cloud import bigquery(Google)
 #
 
 
+
+############################specific calling functions################################################
+
+##SQL##
+
+#engine = create_engine("postgresql://username:password@localhost:5432/dbname")
+#df = pd.read_sql("SELECT * FROM vehicle_data", engine)
+
+
+#Microsoft SQL Server connection
+#engine = create_engine(
+    #"mssql+pyodbc://username:password@server/database?driver=ODBC+Driver+17+for+SQL+Server"
+#)
+
+
+##To write SQL commands within Python"##
+
+#pd.read_sql("SELECT * FROM vehicles", engine)
 
 
 
